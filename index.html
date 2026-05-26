@@ -1,11 +1,382 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://robodata74.github.io/LeadForgeAI/">
-    <title>LeadForge AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- Primary Meta Tags -->
+    <title>LeadForge AI: AI Sales Intelligence Engine</title>
+    <meta name="title" content="LeadForge AI: AI Sales Intelligence Engine">
+    <meta name="description" content="Stop wasting time on cold leads. LeadForge AI instantly scores leads as HOT 🔥, WARM ⭐, or COLD ❄️. Install the app in 30 seconds. Free tier available.">
+    <meta name="author" content="LeadForge AI">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://robodata74.github.io/LeadForgeAI/">
+    <meta property="og:title" content="LeadForge AI: AI Sales Intelligence Engine">
+    <meta property="og:description" content="Stop wasting time on cold leads. LeadForge AI instantly scores leads as HOT 🔥, WARM ⭐, or COLD ❄️. Install the app in 30 seconds. Free tier available.">
+    <meta property="og:image" content="https://robodata74.github.io/LeadForgeAI/images/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://robodata74.github.io/LeadForgeAI/">
+    <meta property="twitter:title" content="LeadForge AI: AI Sales Intelligence Engine">
+    <meta property="twitter:description" content="Stop wasting time on cold leads. LeadForge AI instantly scores leads as HOT 🔥, WARM ⭐, or COLD ❄️. Install the app in 30 seconds. Free tier available.">
+    <meta property="twitter:image" content="https://robodata74.github.io/LeadForgeAI/images/og-image.png">
+    
+    <!-- Favicon (from your GitHub Pages images folder) -->
+    <link rel="icon" type="image/png" href="https://robodata74.github.io/LeadForgeAI/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://robodata74.github.io/LeadForgeAI/images/icon-192.png">
+    
+    <!-- PWA Manifest (points to your live app on PythonAnywhere) -->
+    <link rel="manifest" href="https://robodata74.pythonanywhere.com/static/manifest.json">
+    <meta name="theme-color" content="#0b1220">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        /* ---------- Andrew Charnyy Style: Clean, Functional, Measurable ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0b1220;
+            color: #e2e8f0;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: #0f172a;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #1f2937;
+            flex-wrap: wrap;
+            gap: 16px;
+            background: #111827;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: #3b82f6;
+            font-size: 28px;
+        }
+
+        .logo span {
+            color: #3b82f6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1e293b;
+            color: #3b82f6;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subheadline {
+            font-size: 20px;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            max-width: 100%;
+            border-radius: 16px;
+            margin: 32px auto 0;
+            display: block;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Buttons (Tony Hayes Style: Action-Oriented) */
+        .btn-primary, .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: #1f2937;
+            color: white;
+            border: 1px solid #374151;
+        }
+
+        .btn-secondary:hover {
+            background: #2d3a4a;
+            transform: translateY(-2px);
+        }
+
+        /* PWA Install Card */
+        .install-card {
+            background: #111827;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 40px;
+            border: 1px solid #1f2937;
+            text-align: center;
+        }
+
+        .install-steps {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 24px 0;
+        }
+
+        .step {
+            background: #0f172a;
+            border-radius: 16px;
+            padding: 20px;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .step i {
+            font-size: 28px;
+            color: #3b82f6;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        /* Countdown Timer */
+        .redirect-timer {
+            text-align: center;
+            padding: 20px;
+            background: #0f172a;
+            border-top: 1px solid #1f2937;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .redirect-timer a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            border-top: 1px solid #1f2937;
+            color: #64748b;
+            font-size: 13px;
+            background: #111827;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            .subheadline { font-size: 16px; }
+            .hero { padding: 40px 20px; }
+            .navbar { padding: 16px 20px; }
+            .install-card { margin: 20px; }
+            .step { min-width: 140px; }
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="https://robodata74.github.io/LeadForgeAI/">LeadForge AI</a>...</p>
+
+<div class="container">
+    <!-- Navigation -->
+    <div class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-bolt"></i> LeadForge<span>AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#install">Install App</a>
+            <a href="https://robodata74.pythonanywhere.com" target="_blank">Dashboard</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="badge">
+            <i class="fa-solid fa-sparkles"></i> AI Revenue Intelligence
+        </div>
+        <h1>Stop Guessing. Start Closing.<br>HOT / WARM / COLD in Seconds.</h1>
+        <p class="subheadline">
+            LeadForge AI analyzes your leads in real time. Know exactly who to call, who to nurture, and who to ignore.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://robodata74.pythonanywhere.com" class="btn-primary" target="_blank">
+                <i class="fa-solid fa-rocket"></i> Start Free Analysis
+            </a>
+            <a href="#install" class="btn-secondary">
+                <i class="fa-solid fa-mobile-screen-button"></i> Install App
+            </a>
+        </div>
+        <!-- Hero Image (from GitHub Pages images folder) -->
+        <img class="hero-image" src="https://robodata74.github.io/LeadForgeAI/images/leadforge-hero.png" alt="LeadForge AI Dashboard Preview">
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="features" style="padding: 20px 40px 40px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+            <div style="background: #111827; padding: 24px; border-radius: 16px; text-align: center;">
+                <i class="fa-solid fa-bolt" style="font-size: 32px; color: #3b82f6; margin-bottom: 12px;"></i>
+                <h3 style="margin-bottom: 8px;">Instant Scoring</h3>
+                <p style="font-size: 14px; color: #94a3b8;">AI analyzes and scores leads in real time.</p>
+            </div>
+            <div style="background: #111827; padding: 24px; border-radius: 16px; text-align: center;">
+                <i class="fa-solid fa-bullseye" style="font-size: 32px; color: #3b82f6; margin-bottom: 12px;"></i>
+                <h3 style="margin-bottom: 8px;">Focus on Revenue</h3>
+                <p style="font-size: 14px; color: #94a3b8;">Prioritize HOT leads and close more deals.</p>
+            </div>
+            <div style="background: #111827; padding: 24px; border-radius: 16px; text-align: center;">
+                <i class="fa-solid fa-chart-line" style="font-size: 32px; color: #3b82f6; margin-bottom: 12px;"></i>
+                <h3 style="margin-bottom: 8px;">Analytics Dashboard</h3>
+                <p style="font-size: 14px; color: #94a3b8;">Track performance and export CSV reports.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile App Install Card -->
+    <div id="install" class="install-card">
+        <i class="fa-solid fa-mobile-screen-button" style="font-size: 36px; color: #3b82f6; margin-bottom: 12px;"></i>
+        <h3 style="margin-bottom: 12px;">Install LeadForge AI as a Mobile App</h3>
+        <p style="color: #94a3b8; margin-bottom: 20px;">Get app-like experience on your phone – works offline, launches instantly.</p>
+        <div class="install-steps">
+            <div class="step">
+                <i class="fa-brands fa-chrome"></i>
+                <p><strong>Android (Chrome)</strong><br>Tap ⋮ → "Install app"</p>
+            </div>
+            <div class="step">
+                <i class="fa-brands fa-safari"></i>
+                <p><strong>iPhone (Safari)</strong><br>Tap Share → "Add to Home Screen"</p>
+            </div>
+            <div class="step">
+                <i class="fa-solid fa-house-chimney"></i>
+                <p><strong>Home Screen Icon</strong><br>Tap to launch like any app</p>
+            </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b;"><i class="fa-solid fa-shield-alt"></i> No app store needed. Free. Secure.</p>
+    </div>
+
+    <!-- Countdown Redirect -->
+    <div class="redirect-timer">
+        <p>You will be redirected to <strong>LeadForge AI</strong> in <span id="countdown">5</span> seconds.</p>
+        <p>If not, <a href="https://robodata74.github.io/LeadForgeAI/" class="btn-primary" style="display: inline-block; margin-top: 8px; padding: 6px 16px; font-size: 13px;"><i class="fa-solid fa-arrow-right"></i> Click here</a></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 LeadForge AI – Revenue Intelligence Engine</p>
+        <p style="margin-top: 8px;">
+            <a href="https://robodata74.github.io/go/" style="color:#3b82f6; text-decoration:none;">short.link</a> |
+            <a href="https://github.com/robodata74/LeadForgeAI" style="color:#3b82f6; text-decoration:none;">GitHub</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    // Countdown timer for redirect
+    let seconds = 5;
+    const countdownEl = document.getElementById('countdown');
+    const timer = setInterval(() => {
+        seconds--;
+        if (countdownEl) countdownEl.innerText = seconds;
+        if (seconds <= 0) {
+            clearInterval(timer);
+            window.location.href = 'https://robodata74.github.io/LeadForgeAI/';
+        }
+    }, 1000);
+</script>
+
 </body>
 </html>
